@@ -12,6 +12,15 @@ describe('MyprofileComponent', () => {
     })
     .compileComponents();
   }));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(MyprofileComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(MyprofileComponent);

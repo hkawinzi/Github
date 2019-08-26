@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import { User } from '../user';
+import {User} from './user';
 import { Repository } from '../repository';
 
 
@@ -31,9 +31,7 @@ export class MyprofileComponent implements OnInit {
     this.http.get<ApiResponse>("https://api.github.com/users/hkawinzi?access_token=f60547066bc006c0eb45277bd46177ad902d800d").subscribe(data => {
       this.user = new User(this.userId++, data.name, data.avatar_url, data.followers, data.following, data.public_repos)
       this.reposUrl = data.repos_url;
-      // repoCount=data.public_repos;
     })
-    // get request2....................................
     interface ApiResponse2 {
       name: string;
       description: string;
