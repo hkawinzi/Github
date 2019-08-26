@@ -1,9 +1,48 @@
-<div class="panel panel-info">
-    <div class="panel-heading">
-      Search By User Name:
+<div class="container">
+    <div class="row">
+      <div class="col-md-3">
+      </div>
+      <div class="col-md-6">
+        <h1>Search User</h1>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" [(ngModel)]="userName" name="name" #name="ngModel" required>
+          <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+            <p> Name is Required</p>
+          </div>
+        </div>
+        <button type="Submit" class="btn btn-success btn-lg" (click)=showUser() [disabled]="userName==''">SEARCH</button>
+        <div class="row hidden" *ngIf="show == true">
+          <div class="row" id="center">
+            <div class="col-md-6">
+              <img id="profilePic" src="{{user?.picture}}" alt="profile pic">
+            </div>
+            <div class="col-md-6">
+              <h4>NAME:{{user?.name}}</h4>
+              <h4>FOLLOWERS:{{user?.followers}}</h4>
+              <h4>FOLLOWINGS:{{user?.following}}</h4>
+              <h4>REPOSITORIES:{{user?.repositories}}</h4>
+              <h4>CREATED:</h4>
+              <button class="btn btn-primary btn-lg" (click)="showRepo()" type="button" name="button">View Repos</button>
+            </div>
+          </div>
+      </div>
+  
+      </div>
+      <!-- 3rd column -->
+      <div class="col-md-3">
+      </div>
     </div>
     <div class="panel-body">
       Search By Repository:
+    <!--row 2......................................................  -->
+    <div class="row hidden" *ngIf="show1 == true">
+      <div *ngFor="let repo of repos" class="col-md-3 repoColumn">
+        <h3>Name: {{repo.name}}</h3>
+        <p>Description:{{repo.description}}</p>
+        <p>Language:{{repo.language}}</p>
+        <p>Forks:{{repo.forks}}</p>
+        <p>Goto the github repository:<a href="{{repo.url}}">Click Here</a></p>
+      </div>
     </div>
-  
-  </div>
+</div>
