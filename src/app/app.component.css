@@ -1,0 +1,20 @@
+.happy {
+    opacity: 0.8;
+    text-align: center;
+    padding: 50px;
+}
+#logo{
+    width:80px;
+    height:80px;
+    margin-right: 15px;
+}
+.link{
+    display:inline;
+    background-color: grey;
+    margin-left: 30px;
+    border-radius: 10px;
+    padding:10px 10px 10px 10px;
+}
+  a{
+    color:white;
+  }
