@@ -1,6 +1,5 @@
-<div class="jumbotron">
-    <img id="logo" src="assets/logo1.png" alt="">
-    <img id="github" src="assets/GitHub-Logo.png" alt="github logo">
+<img id="logo1" src="assets/logo1.png" alt="">
+<img id="logo2" src="assets/GitHub-Logo.png" alt="github logo">
 </div>
 <div class="container">
     <div class="row">
@@ -17,17 +16,15 @@
                     <h4>FOLLOWINGS:{{user.following}}</h4>
                     <h4>REPOSITORIES:{{user.repositories}}</h4>
                     <h4>CREATED:</h4>
-                    <button class="btn btn-primary btn-lg" type="button" name="button">View Repos</button>
+                    <button class="btn btn-lg" type="button" name="button">View Repos</button>
                 </div>
             </div>
         </div>
-        <!--col-right  -->
         <div class="col-md-3">
         </div>
     </div>
-    <!--row 2 ---------------------------------------------------------------------------- -->
     <div class="row">
-       
+
 
         <div *ngFor="let repo of repos" class="col-md-3">
             <h3>Name: {{repo.name}}</h3>
@@ -35,7 +32,7 @@
             <p>Language:{{repo.language}}</p>
             <p>Forks:{{repo.forks}}</p>
 
-            <p>Goto the github repository:<a href="{{repo.url}}">Click Here</a></p>
+            <p>Goto the github repository:<a href="{{repo.url}}">Click Here!</a></p>
         </div>
 
 

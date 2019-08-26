@@ -1,4 +1,5 @@
-import {User} from '../app/user';
+import {User} from './user';
 export var Users:User[]=[
 
 ]
+
