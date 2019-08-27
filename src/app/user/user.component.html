@@ -8,7 +8,6 @@
           <label for="name">Name</label>
           <input type="text" class="form-control" id="name" [(ngModel)]="userName" name="name" #name="ngModel" required>
           <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
-            <p> Name is Required</p>
           </div>
         </div>
         <button type="Submit" class="btn btn-success btn-lg" (click)=showUser() [disabled]="userName==''">SEARCH</button>
@@ -33,8 +32,6 @@
       <div class="col-md-3">
       </div>
     </div>
-    <div class="panel-body">
-      Search By Repository:
     <!--row 2......................................................  -->
     <div class="row hidden" *ngIf="show1 == true">
       <div *ngFor="let repo of repos" class="col-md-3 repoColumn">
