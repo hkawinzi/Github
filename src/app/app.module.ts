@@ -11,6 +11,7 @@ import { NgProgressHttpModule} from '@ngx-progressbar/http';
 import { RepositoryComponent } from './repository/repository.component';
 import { RoutingModule} from './routing/routing.module';
 import { FormsModule} from '@angular/forms';
+import { RoutingComponent } from './routing/routing.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { FormsModule} from '@angular/forms';
     AppComponent,
     MyprofileComponent,
     UserComponent,
+    RoutingComponent,
   ],
   imports: [
     BrowserModule,
