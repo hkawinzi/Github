@@ -1,8 +1,8 @@
 import { BoldDirective } from './bold.directive';
 
-describe('Bold.Directive', () => {
+describe('BoldDirective', () => {
   it('should create an instance', () => {
-    const directive = new BoldDirective();
-    expect(new BoldDirective()).toBeTruthy();
+    const directive = new Bold.Directive();
+    expect(directive).toBeTruthy();
   });
 });

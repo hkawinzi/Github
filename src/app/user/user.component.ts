@@ -10,7 +10,6 @@ import {InfoRequestService} from '../info-http/info-request.service';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-
   userName="";
   user:User;
   show=false;
@@ -26,10 +25,11 @@ export class UserComponent implements OnInit {
     this.infoService.repoRequest(this.userName);
     this.repos=this.infoService.repos;
   }
-  // user= new User(0,"","",0,0,0);
   constructor(private infoService:InfoRequestService) { }
 
   ngOnInit() {
+
   }
 
 }
+

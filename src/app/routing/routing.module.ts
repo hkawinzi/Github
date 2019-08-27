@@ -4,7 +4,6 @@ import { RouterModule, Routes} from '@angular/router';
 import { MyprofileComponent} from '../myprofile/myprofile.component';
 import { UserComponent} from '../user/user.component';
 import { RepositoryComponent} from '../repository/repository.component';
-
 const routes:Routes=[
   {path:"myprofile", component:MyprofileComponent},
   {path:"user", component:UserComponent},
@@ -12,3 +11,12 @@ const routes:Routes=[
   {path:"",redirectTo:"/myprofile",pathMatch:"full"}
 
 ]
+@NgModule({
+  declarations: [],
+  imports: [
+    CommonModule,
+    RouterModule.forRoot(routes)
+  ],
+  exports:[RouterModule]
+})
+export class RoutingModule { }

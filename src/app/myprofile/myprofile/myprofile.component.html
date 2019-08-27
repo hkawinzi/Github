@@ -1,29 +1,39 @@
 <ng-progress></ng-progress>
+
 <div class="container">
-    <div class="row">
-        <div class="col-md-3">
-        </div>
-        <div id="center" class="col-md-6">
-            <div class="row">
-                <div class="col-md-6">
-                    <img id="profilePic" src="{{user?.picture}}" alt="profile pic">
-                </div>
-                <div class="col-md-6">
-                    <h4>NAME:{{user?.name}}</h4>
-                    <h4>FOLLOWERS:{{user?.followers}}</h4>
-                    <h4>FOLLOWINGS:{{user?.following}}</h4>
-                    <h4>REPOSITORIES:{{user?.repositories}}</h4>
-                    <h4>CREATED:{{user?.creationDate|dateOfCreation}} days ago</h4>
-                    <button class="btn btn-lg" (click)="showRepo()" type="button" name="button">View Repos</button>
-                </div>
-            </div>
-        </div>
+  <div class="row">
+    <div class="col-md-3">
     </div>
-</div>
-<div class="row hidden" *ngIf="show == true">
-    <div *ngFor="let repo of repos" class="col-md-3">
+    <div id="center" class="col-md-6">
+      <div class="row">
+        <div class="col-md-6">
+          <img id="profilePic" src="{{user?.picture}}" alt="profile pic">
+        </div>
+        <div class="col-md-6" >
+            <h4>NAME:{{user?.name}}</h4>
+            <h4>FOLLOWERS:{{user?.followers}}</h4>
+            <h4>FOLLOWINGS:{{user?.following}}</h4>
+            <h4>REPOSITORIES:{{user?.repositories}}</h4>
+            <h4>CREATED:{{user?.creationDate|dateOfCreation}} days ago</h4>
+            <button class="btn btn-primary btn-lg" (click) ="showRepo()" type="button" name="button">View Repos</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+    </div>
+  </div>
+  <div class="row hidden" *ngIf = "show == true" >
+    </div> 
+
+      <div *ngFor="let repo of repos" class="col-md-3 repoColumn">
         <h3>Name: {{repo.name}}</h3>
         <p>Description:{{repo.description}}</p>
         <p>Language:{{repo.language}}</p>
-    </div>
+        <p>Forks:{{repo.forks}}</p>
+
+        <p>Goto the github repository:<a href="{{repo.url}}">Click Here</a></p>
+      </div>
+
+    </div> 
+  </div>
 </div>
