@@ -12,7 +12,7 @@ export class InfoRequestService {
   constructor(private http:HttpClient) {
     this.user= new User(0,"","",0,0,0);
    }
-   infoRequest(){
+   infoRequest(username:string){
      interface ApiResponse{
        name:string;
        avatar_url:string;
@@ -22,7 +22,7 @@ export class InfoRequestService {
        repos_url:string;
      }
      let promise = new Promise((resolve,reject)=>{
-       this.http.get<ApiResponse>(environment.apiUrl).toPromise().then(response=>{
+       this.http.get<ApiResponse>(environment.apiUrla+username+environment.apiUrlb).toPromise().then(response=>{
          this.user.id++;
          this.user.name =response.name;
          this.user.picture =response.avatar_url;
@@ -36,7 +36,7 @@ export class InfoRequestService {
      })
      return promise;
    }
-   repoRequest(){
+   repoRequest(username:string){
      interface ApiResponse2{
       name:string;
       description:string;
@@ -45,7 +45,7 @@ export class InfoRequestService {
       html_url:string;
     }
     let promise = new Promise((resolve,reject)=>{
-      this.http.get<ApiResponse2>(environment.apiUrl2).toPromise().then(response=>{
+      this.http.get<ApiResponse2>(environment.apiUrl2a+username+environment.apiUrl2b).toPromise().then(response=>{
         for(let i=0;i<response["length"];i++){
           let newRepo= new Repository(0,"","","",0,"");
           newRepo.repoId = i+1;
