@@ -1,8 +1,11 @@
 export const environment = {
   production: false,
+  apiUrla:"https://api.github.com/users/",
+  apiUrlb:"?access_token=56bd1895b2e987e016d5ec4a6edd9bd2d7addfda",
+  apiUrl2a:"https://api.github.com/users/",
+  apiUrl2:"?access_token=56bd1895b2e987e016d5ec4a6edd9bd2d7addfda",
+  apiUrl3a:"https://api.github.com/search/repositories?q=",
+  apiUrl3b:"&access_token=56bd1895b2e987e016d5ec4a6edd9bd2d7addfda"
 
-
-  apiUrl1:"https://api.github.com/users/hkawinzi/repos?access_token=56bd1895b2e987e016d5ec4a6edd9bd2d7addfda",
-  apiUrl2:"https://api.github.com/users/hkawinzi/repos?access_token=5bf712d6647592c41f847c23474a84d1e36141cc"
 };
 
