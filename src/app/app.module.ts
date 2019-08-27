@@ -12,6 +12,8 @@ import { RepositoryComponent } from './repository/repository.component';
 import { RoutingModule} from './routing/routing.module';
 import { FormsModule} from '@angular/forms';
 import { RoutingComponent } from './routing/routing.component';
+import { BoldDirective } from './bold.directive';
+import { DateOfCreationPipe } from './date-of-creation.pipe';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { RoutingComponent } from './routing/routing.component';
     AppComponent,
     MyprofileComponent,
     UserComponent,
-    RoutingComponent,
+    RepositoryComponent,
+    BoldDirective,
+    DateOfCreationPipe
   ],
   imports: [
     BrowserModule,
