@@ -9,10 +9,13 @@ import { UserComponent } from './user/user.component';
 import { NgProgressModule} from '@ngx-progressbar/core';
 import { NgProgressHttpModule} from '@ngx-progressbar/http';
 import { RepositoryComponent } from './repository/repository.component';
+import { RoutingModule} from './routing/routing.module';
+import { FormsModule} from '@angular/forms';
 
 
 @NgModule({
   declarations: [
+  
     AppComponent,
     MyprofileComponent,
     UserComponent,
@@ -22,8 +25,9 @@ import { RepositoryComponent } from './repository/repository.component';
     AppRoutingModule,
     HttpClientModule,
     NgProgressModule,
-    NgProgressHttpModule
-
+    NgProgressHttpModule,
+    RoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
