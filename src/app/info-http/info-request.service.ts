@@ -68,6 +68,7 @@ export class InfoRequestService {
     })
     return promise;
    }
+   // ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
    repoNameRequest(reponame:string){
      interface ApiResponse3{
       name:string;
@@ -96,4 +97,5 @@ export class InfoRequestService {
     })
     return promise;
    }
+  // .....................................................................................
 }

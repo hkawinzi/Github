@@ -1,8 +1,10 @@
+
 #center{
   background-color: white;
   border-radius: 30px;
   padding: 30px 30px 30px 30px;
   opacity: 0.9;
+  /* padding-left: 30px; */
 }
 #profilePic{
   border-radius:50%;
@@ -10,6 +12,7 @@
   height:250px;
 }
 .hidden {
+  /* display:none; */
   margin-top:30px;
 }
 .repoColumn{

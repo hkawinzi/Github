@@ -10,3 +10,5 @@ export class BoldDirective {
  }
 
 }
+// background-color: white;
+// font-weight: bold;

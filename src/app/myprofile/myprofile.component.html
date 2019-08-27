@@ -1,9 +1,12 @@
 <ng-progress></ng-progress>
 
 <div class="container">
+  <!--1st Row------------------------------------------------------------------------------  -->
   <div class="row">
+    <!--col-left  -->
     <div class="col-md-3">
     </div>
+    <!--col-center  -->
     <div id="center" class="col-md-6">
       <div class="row">
         <div class="col-md-6">
@@ -19,11 +22,17 @@
         </div>
       </div>
     </div>
+    <!--col-right  -->
     <div class="col-md-3">
     </div>
   </div>
+  <!--row 2 ---------------------------------------------------------------------------- -->
   <div class="row hidden" *ngIf = "show == true" >
-    </div> 
+    <!--1st col of 2nd row  -->
+    <!-- <div class="col-md-2">
+
+    </div> -->
+    <!--2st col of 2nd row  -->
 
       <div *ngFor="let repo of repos" class="col-md-3 repoColumn">
         <h3>Name: {{repo.name}}</h3>
@@ -34,6 +43,8 @@
         <p>Goto the github repository:<a href="{{repo.url}}">Click Here</a></p>
       </div>
 
-    </div> 
+    <!--3rd col of 2nd row  -->
+    <!-- <div class="col-md-2">
+    </div> -->
   </div>
 </div>

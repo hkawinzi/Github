@@ -25,11 +25,13 @@ export class UserComponent implements OnInit {
     this.infoService.repoRequest(this.userName);
     this.repos=this.infoService.repos;
   }
+  // user= new User(0,"","",0,0,0);
   constructor(private infoService:InfoRequestService) { }
 
   ngOnInit() {
+    // this.infoService.infoRequest(this.userName);
+    // this.user=this.infoService.user;
 
   }
 
 }
-

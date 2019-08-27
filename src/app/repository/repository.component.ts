@@ -17,10 +17,7 @@ export class RepositoryComponent implements OnInit {
     this.infoService.repoNameRequest(this.repoName);
     this.repositories=this.infoService.repositories;
   }
-
   constructor(private infoService:InfoRequestService) { }
-
   ngOnInit() {
   }
-
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {User} from '../myprofile';
+import {User} from '../user';
 import {Repository} from '../repository';
 import {InfoRequestService} from '../info-http/info-request.service';
 @Component({
@@ -12,15 +12,22 @@ import {InfoRequestService} from '../info-http/info-request.service';
 export class MyprofileComponent implements OnInit {
   user:User;
   repos=[];
+  // repoCount;
+  // repos=[];
+  // userId=0;
+  // repoId=0;
+  // reposUrl:string;
   show = false;
   constructor(private infoService:InfoRequestService) { }
   showRepo(){
     this.show=true;
   }
   ngOnInit() {
-    this.infoService.infoRequest("hkawinzi");
+    // get request1.....................................
+    this.infoService.infoRequest("anumasif");
     this.user=this.infoService.user;
-    this.infoService.repoRequest("hkawinzi");
+    //get request2.......................................
+    this.infoService.repoRequest("anumasif");
     this.repos=this.infoService.repos;
   }
 

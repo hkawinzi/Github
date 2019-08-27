@@ -1,27 +1,27 @@
 <div class="container">
-    <div class="row">
-      <div class="col-md-3"></div>
-      <div class="col-md-6">
-        <h1>Search Repo</h1>
-        <div class="form-group">
-          <label for="name">Repo Name:</label>
-          <input type="text" class="form-control" id="name" [(ngModel)]="repoName" name="name" #name="ngModel" required>
-          <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
-            <p> Repo Name is Required</p>
-          </div>
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <h1>Search Repo</h1>
+      <div class="form-group">
+        <label for="name">Repo Name:</label>
+        <input type="text" class="form-control" id="name" [(ngModel)]="repoName" name="name" #name="ngModel" required>
+        <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+          <p> Repo Name is Required</p>
         </div>
-        <button type="Submit" class="btn btn-success btn-lg" (click)=showRepository() [disabled]="repoName==''">SEARCH</button>
-        
       </div>
-      <div class="col-md-3"></div>
+      <button type="Submit" class="btn btn-success btn-lg" (click)=showRepository() [disabled]="repoName==''">SEARCH</button>
+      
     </div>
-    <div class="row hidden" *ngIf="show === true">
-        <div *ngFor="let repo of repositories" class="col-md-3 repoColumn">
-        <p>Name:<span>{{repo.repoName}}</span> </p>
-        <p>Description:{{repo.description}}</p>
-        <p>Language:{{repo.language}}</p>
-        <p>Forks:{{repo.forks}}</p>
-        <p>Goto the github repository:<a href="{{repo.url}}">Click Here</a></p>
-      </div>
+    <div class="col-md-3"></div>
+  </div>
+  <div class="row hidden" *ngIf="show === true">
+      <div *ngFor="let repo of repositories" class="col-md-3 repoColumn">
+      <p>Name:<span>{{repo.repoName}}</span> </p>
+      <p>Description:{{repo.description}}</p>
+      <p>Language:{{repo.language}}</p>
+      <p>Forks:{{repo.forks}}</p>
+      <p>Goto the github repository:<a href="{{repo.url}}">Click Here</a></p>
     </div>
   </div>
+</div>

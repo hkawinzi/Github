@@ -4,6 +4,7 @@ import { RouterModule, Routes} from '@angular/router';
 import { MyprofileComponent} from '../myprofile/myprofile.component';
 import { UserComponent} from '../user/user.component';
 import { RepositoryComponent} from '../repository/repository.component';
+//Defining routes
 const routes:Routes=[
   {path:"myprofile", component:MyprofileComponent},
   {path:"user", component:UserComponent},
