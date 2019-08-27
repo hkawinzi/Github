@@ -6,8 +6,8 @@
 This application is developed for you to get my github information. You can search for a github user by typing it's name in the given search field or you can also search for a repository. It includes a button that shows repositories of a particular user when pressed.
 ## Setup/Installation Requirements
 *Web Browser*
-## Specifications
-### The website:
+
+### BDD:
 1. displays github info of a user when user name is entered
    - INPUT:"user name entered"
    - OUTPUT:Github information of a user
