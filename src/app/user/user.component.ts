@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {User} from '../user';
 import {InfoRequestService} from '../info-http/info-request.service';
+
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',

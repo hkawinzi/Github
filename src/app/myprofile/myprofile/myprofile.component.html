@@ -13,7 +13,7 @@
                     <h4>FOLLOWERS:{{user?.followers}}</h4>
                     <h4>FOLLOWINGS:{{user?.following}}</h4>
                     <h4>REPOSITORIES:{{user?.repositories}}</h4>
-                    <h4>CREATED:</h4>
+                    <h4>CREATED:{{user?.creationDate|dateOfCreation}} days ago</h4>
                     <button class="btn btn-lg" (click)="showRepo()" type="button" name="button">View Repos</button>
                 </div>
             </div>

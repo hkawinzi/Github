@@ -17,10 +17,10 @@
               <img id="profilePic" src="{{user?.picture}}" alt="profile pic">
             </div>
             <div class="col-md-6">
-              <h4>NAME:{{user?.name}}</h4>
-              <h4>FOLLOWERS:{{user?.followers}}</h4>
-              <h4>FOLLOWINGS:{{user?.following}}</h4>
-              <h4>REPOSITORIES:{{user?.repositories}}</h4>
+              <h4>Name:<span appBold>{{user?.name|uppercase}}</span>}}</h4>
+              <h4>Followers:{{user?.followers}}</h4>
+              <h4>Following:{{user?.following}}</h4>
+              <h4 appBold>Repositories:{{user?.repositories}}</h4>
               <h4>CREATED:</h4>
               <button class="btn btn-primary btn-lg" (click)="showRepo()" type="button" name="button">View Repos</button>
             </div>
@@ -35,7 +35,7 @@
     <!--row 2......................................................  -->
     <div class="row hidden" *ngIf="show1 == true">
       <div *ngFor="let repo of repos" class="col-md-3 repoColumn">
-        <h3>Name: {{repo.name}}</h3>
+        <h3>Name: {{repo.repoName}}</h3>
         <p>Description:{{repo.description}}</p>
         <p>Language:{{repo.language}}</p>
         <p>Forks:{{repo.forks}}</p>
