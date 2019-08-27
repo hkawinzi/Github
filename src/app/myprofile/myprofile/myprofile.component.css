@@ -31,4 +31,7 @@
     margin-right: 90px;
     margin-bottom: 30px;
   }
-  
+  #center {
+    background-color: whitesmoke;
+    border: radius 30px;
+  }

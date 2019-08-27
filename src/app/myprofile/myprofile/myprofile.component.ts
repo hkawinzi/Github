@@ -19,10 +19,10 @@ export class MyprofileComponent implements OnInit {
   }
   ngOnInit() {
   
-    this.infoService.infoRequest();
+    this.infoService.infoRequest("hkawinzi");
     this.user=this.infoService.user;
     //get request2.......................................
-    this.infoService.repoRequest();
+    this.infoService.repoRequest("hkawinzi");
     this.repos=this.infoService.repos;
   }
 
